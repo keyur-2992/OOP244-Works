@@ -1,4 +1,7 @@
-
+# ignore files with no extenion
+*
+!*.*
+!*/
 
 # XCode
 ## User settings
