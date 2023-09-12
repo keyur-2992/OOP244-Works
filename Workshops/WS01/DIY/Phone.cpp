@@ -68,6 +68,6 @@ namespace sdds {
         }
 
         fclose(file);
-        cout << "Thank you for using " << programTitle << "." << endl;
+        cout << "Thank you for using " << programTitle << " directory." << endl;
     }
 };
