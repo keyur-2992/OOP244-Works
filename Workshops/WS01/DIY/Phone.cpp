@@ -69,16 +69,18 @@ namespace sdds {
         }
 
         char partialName[51];  // 50 characters for the name + null terminator
-        while (true) {
+        bool exitLoop = false; // For breaking the Loop 
+        while (!exitLoop) {
             cout << "Enter a partial name to search (no spaces) or enter '!' to exit" << endl;
             cout << "> ";
             cin >> partialName;
 
             if (strcmp(partialName, "!") == 0) {
-                break;
+                exitLoop = true;
             }
-
-            searchAndDisplay(file, partialName);
+            else {
+                searchAndDisplay(file, partialName);
+            }
         }
 
         fclose(file);
