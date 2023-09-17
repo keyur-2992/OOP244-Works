@@ -23,7 +23,7 @@ namespace sdds {
 
     // Function to search for partial names and display matching records
     void searchAndDisplay(FILE* file, const char* partialName) {
-        bool found = false;
+
         char name[51], areaCode[4], prefix[4], number[5];
 
         // Convert the partialName to lowercase for case-insensitive search
@@ -31,7 +31,7 @@ namespace sdds {
         for (int i = 0; partialName[i] != '\0'; i++) {
             lowerPartialName[i] = toLower(partialName[i]);
         }
-        lowerPartialName[strlen(partialName)] = '\0';
+        lowerPartialName[strLen(partialName)] = '\0';
 
         while (fscanf(file, "%50[^\t]\t%3s\t%3s\t%4s\n", name, areaCode, prefix, number) == 4) {
             // Convert the name to lowercase for case-insensitive search
@@ -39,11 +39,10 @@ namespace sdds {
             for (int i = 0; name[i] != '\0'; i++) {
                 lowerName[i] = toLower(name[i]);
             }
-            lowerName[strlen(name)] = '\0';
+            lowerName[strLen(name)] = '\0';
 
-            if (strstr(lowerName, lowerPartialName) != nullptr) {
+            if (strStr(lowerName, lowerPartialName) != nullptr) {
                 cout << name << ": (" << areaCode << ") " << prefix << "-" << number << endl;
-                found = true;
             }
         }
        
@@ -69,7 +68,7 @@ namespace sdds {
             cout << "> ";
             cin >> partialName;
 
-            if (strcmp(partialName, "!") == 0) {
+            if (strCmp(partialName, "!") == 0) {
                 exitLoop = true;
             }
             else {
