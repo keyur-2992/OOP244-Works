@@ -1,0 +1,20 @@
+/*
+*****************************************************************************
+                          Workshop 1 Reflection
+Full Name  : keyurkumar shankarlal patel
+Student ID#: 170852214
+Email      : kpatel453@myseneca.ca
+Section    : ZAA
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+Through workshops and classes, I have learned the fundamental principles of organizing source code into modular structures using header and implementation files. This modular approach allows for better code organization, reusability, and maintainability. I have gained a deeper understanding of how to separate the interface (defined in header files) from the implementation (defined in source files), thereby promoting encapsulation and information hiding.
+
+Furthermore, I have honed my skills in compiling and linking modular programs, which is crucial for building complex software systems. By distinguishing between header and implementation files, I have learned how to define class or function interfaces in header files while implementing the actual logic in separate source files, promoting a clear separation of concerns.
+
+In a recent lab exercise, I applied these principles by structuring provided code into modules, enhancing code readability, and facilitating collaboration with teammates. Additionally, I implemented a case-insensitive search function that converts user input and file data to lowercase, improving the search functionality. This practical experience has reinforced the importance of modularization and encapsulation in software development, enabling me to write more organized and maintainable code in real-world projects.

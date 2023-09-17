@@ -14,9 +14,14 @@ piece of work is entirely of my own creation.
 */
 #ifndef SDDS_PHONE_H 
 #define SDDS_PHONE_H
+#include <cstdio>
 
 namespace sdds {
+	//globalizing FILE pointer
+	extern FILE* file;
 	
+	// Function to search for partial names and display matching records
+	void searchAndDisplay(FILE* file, const char* partialName);
 	// runs the phone directory application
 	void phoneDir(const char* programTitle, const char* fileName);
 	

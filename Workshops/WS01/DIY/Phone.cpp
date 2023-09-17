@@ -15,6 +15,7 @@ piece of work is entirely of my own creation.
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <iomanip>
+#include "Phone.h"
 #include "cStrTools.h"
 
 using namespace std;
@@ -45,13 +46,7 @@ namespace sdds {
                 found = true;
             }
         }
-        /*
-        //display a message if No record match found
-        if (!found) {
-            cout << "No match is found." << endl;
-        }
-        */
-
+       
         fseek(file, 0, SEEK_SET); // Reset file pointer to the beginning
     }
 
