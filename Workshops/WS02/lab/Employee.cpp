@@ -79,7 +79,7 @@ namespace sdds {
 
    // TODO: Implementation for the display functions go here
    void display(const Employee& emp){
-       cout << emp.m_empNo << ": " << emp.m_name << ", " << emp.m_salary << endl;
+       cout << emp.m_empNo << ": " << emp.m_name << ", $" << emp.m_salary << endl;
    }
 
    void display(){
