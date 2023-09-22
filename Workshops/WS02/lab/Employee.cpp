@@ -12,6 +12,7 @@
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <cstring>
 #include "Employee.h"
 #include "File.h"
 using namespace std;
