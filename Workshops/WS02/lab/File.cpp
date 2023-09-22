@@ -12,7 +12,6 @@
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
-#include <cstring>
 #include "File.h"
 
 namespace sdds {
@@ -33,52 +32,23 @@ namespace sdds {
    void closeFile() {
       if (fptr) fclose(fptr);
    }
-   /* TODO: read functions go here    
-   bool read(................) {
-      return .....
-   }*/
-   bool read(FILE* fptr, char*& empName) {
-       char temp[128];
-
-       if (fptr != nullptr && empName != nullptr) {
-           if (fscanf(fptr, "%127[^\n]\n", temp) == 1) {
-               temp[127] = '\0';
-               empName = new char[strlen(temp) + 1];
-
-               if (empName != nullptr) {
-                   strcpy(empName, temp);
-                   return true;
-               }
-               else {
-                   return false;
-               }
-           }
-       }
-       return false;
-   }
-   /*
-   bool read(................) {
-      return .....
-   }*/
-   
-   bool read(FILE* fptr, int& empNo) {
-       int temp;
-       if (fscanf(fptr, "%d", &temp) == 1) {
-           return true;
-       }
-       return false;
-   }
-   /*
-   bool read(................) {
-      return .....
-   }
-   */
-   bool read(FILE* fptr, double& empSal) {
-       double temp;
-       if (fscanf(fptr, "%lf", &temp) == 1) {
-           return true;
-       }
-       return false;
+   //TODO: read functions go here    
+   // Reads the name of the employee | Accepts as a parameter the address of an array of characters
+   bool read(char *empName)
+   {
+     return fscanf(fptr, "%[^\n]\n", empName) == 1;
    }
 
+   // Reads employee number | Accepts as a parameter a reference to an integer
+   bool read(int &empNumber)
+   {
+     return fscanf(fptr, "%d,", &empNumber) == 1;
+   }
+
+   // Reads the employee salary | Acceptes as a parameter a reference to an floating point number
+   // in double precision
+   bool read(double &empSalary)
+   {
+     return fscanf(fptr, "%lf,", &empSalary) == 1;
+   }
 }

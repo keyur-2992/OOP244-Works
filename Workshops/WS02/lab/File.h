@@ -17,9 +17,15 @@ namespace sdds {
    void closeFile();
    int noOfRecords();
    // TODO: Declare overloaded read function prototypes
-   bool read(FILE* fptr,char*& empName);
-   bool read(FILE* fptr,int& empNo);
-   bool read(FILE* fptr,double& empSal);
+	// Reads the name of the employee | Accepts as a parameter the address of an array of characters
+   bool read(char* empName);
+
+   // Reads employee number | Accepts as a parameter a reference to an integer
+   bool read(int& empNumber);
+
+   // Reads the employee salary | Acceptes as a parameter a reference to an floating point number
+   // in double precision
+   bool read(double& empSalary);
 
 }
 
