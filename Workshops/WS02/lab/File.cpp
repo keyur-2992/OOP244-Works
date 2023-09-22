@@ -12,6 +12,7 @@
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
+#include <cstring>
 #include "File.h"
 
 namespace sdds {
@@ -35,12 +36,49 @@ namespace sdds {
    /* TODO: read functions go here    
    bool read(................) {
       return .....
+   }*/
+   bool read(FILE* fptr, char*& empName) {
+       char temp[128];
+
+       if (fptr != nullptr && empName != nullptr) {
+           if (fscanf(fptr, "%127[^\n]\n", temp) == 1) {
+               temp[127] = '\0';
+               empName = new char[strlen(temp) + 1];
+
+               if (empName != nullptr) {
+                   strcpy(empName, temp);
+                   return true;
+               }
+               else {
+                   return false;
+               }
+           }
+       }
+       return false;
    }
+   /*
    bool read(................) {
       return .....
+   }*/
+   
+   bool read(FILE* fptr, int& empNo) {
+       int temp;
+       if (fscanf(fptr, "%d", &temp) == 1) {
+           return true;
+       }
+       return false;
    }
+   /*
    bool read(................) {
       return .....
    }
    */
+   bool read(FILE* fptr, double& empSal) {
+       double temp;
+       if (fscanf(fptr, "%lf", &temp) == 1) {
+           return true;
+       }
+       return false;
+   }
+
 }

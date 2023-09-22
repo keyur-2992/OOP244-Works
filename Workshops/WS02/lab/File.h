@@ -17,7 +17,9 @@ namespace sdds {
    void closeFile();
    int noOfRecords();
    // TODO: Declare overloaded read function prototypes
- 
+   bool read(FILE* fptr,char*& empName);
+   bool read(FILE* fptr,int& empNo);
+   bool read(FILE* fptr,double& empSal);
 
 }
 
