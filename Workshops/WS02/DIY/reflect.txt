@@ -1,0 +1,24 @@
+/*
+*****************************************************************************
+                          Workshop 2  reflect
+Full Name  : keyurkumar shankarlal patel
+Student ID#: 170852214
+Email      : kpatel453@myseneca.ca
+Section    : ZAA
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+In completing this workshop, I gained valuable insights into various aspects of C++ programming. One significant concept I learned was dynamic memory allocation. This workshop reinforced the importance of allocating and deallocating dynamic memory for arrays properly. It provided me with practical experience in managing memory efficiently, which is essential for writing robust and memory-safe C++ programs.
+
+Another key takeaway was function overloading. I learned how to create multiple versions of functions with different parameter lists. This flexibility allows me to design functions that can handle various scenarios within a program. I found this to be particularly useful when dealing with different requirements for loading data from a file in the population module.
+
+Working with references was another skill I honed during this workshop. Understanding when and how to use references correctly is crucial, especially when dealing with large data structures. It not only improves program efficiency but also helps prevent unnecessary data copying.
+
+In terms of challenges, one notable difficulty was implementing the population module's load function with different parameter lists. Initially, I found it challenging to determine how to load data from a file based on whether a partial postal code prefix was provided or not. However, by leveraging function overloading, I devised a solution that met the requirements effectively.
+
+Overall, this workshop expanded my knowledge of C++ programming and provided hands-on experience in critical areas like dynamic memory, function overloading, and file handling. These newfound skills will undoubtedly benefit me in future programming tasks and projects.

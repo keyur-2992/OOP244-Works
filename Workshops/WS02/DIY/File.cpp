@@ -8,7 +8,7 @@
 //   To completed by students
 // Revision History
 // -----------------------------------------------------------
-// Name            Date            Reason
+// Name:Keyurkumar Patel      Date: 25-SEP-2023      STU ID: 170852214
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <cstdio>
@@ -23,5 +23,17 @@ namespace sdds {
    void closeFile() {
       if (fptr) fclose(fptr);
    }
-
+   // TODO : implement the read fuction
+   bool read(char* code) {
+       if (fscanf(fptr, "%[^,],", code) == 1) {
+           return true;
+       }
+       return false;
+   }
+   bool read(int& population) {
+       if (fscanf(fptr, "%d\n", &population) == 1) {
+           return true;
+       }
+       return false;
+   }
 }

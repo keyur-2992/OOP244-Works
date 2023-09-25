@@ -15,6 +15,10 @@
 namespace sdds {
    bool openFile(const char filename[]);
    void closeFile();
+    
+   //TODO : define the read fuction
+   bool read(char* code);
+   bool read(int& population);
 
 
 }
