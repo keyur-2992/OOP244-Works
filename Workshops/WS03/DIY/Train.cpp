@@ -125,6 +125,7 @@ namespace sdds {
     // for part 2
     bool Train::load(int& unboardedPassengers) {
         cout << "Enter number of passengers boarding:" << endl;
+        cout << "> ";
         int passengers;
         cin >> passengers;
 
@@ -145,6 +146,7 @@ namespace sdds {
 
     bool Train::updateDepartureTime() {
         cout << "Enter new departure time:" << endl;
+        cout << "> ";
         int newDepartureTime;
         cin >> newDepartureTime;
 
