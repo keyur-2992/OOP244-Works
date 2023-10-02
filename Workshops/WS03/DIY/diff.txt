@@ -1,0 +1,14 @@
+In line number 18 of your output:
+The output should be:
+> 250
+^
+But your output is: 
+250
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [>] ASCII code(62)
+but you printed
+  [2] ASCII code(50)
+
