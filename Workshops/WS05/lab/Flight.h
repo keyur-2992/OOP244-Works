@@ -8,7 +8,7 @@
 //
 // Revision History
 // -----------------------------------------------------------
-// Name                 Date            Reason
+// Name keyurkumar Patel  Date 10-OCT-2023  STU ID 170852214
 ***********************************************************************/
 #ifndef SDDS_FLIGHT_H
 #define SDDS_FLIGHT_H
@@ -30,7 +30,29 @@ namespace sdds {
       Flight();
       Flight(int passengers, double fuel, const char* title);
       std::ostream& display()const;
+
+      operator bool() const;
+      operator int() const;
+      operator double() const;
+      operator const char* () const;
+      bool operator ~() const;
+
+      Flight& operator=(Flight& first);
+      Flight& operator=(int passenger);
+      Flight& operator=(double fuel);
+
+      Flight& operator+=(double fuel);
+      Flight& operator+=(int passenger);
+
+      Flight& operator-=(double fuel);
+      Flight& operator-=(int passenger);
+
+      Flight& operator>>(Flight& right);
+      Flight& operator<<(Flight& right);
    };
+
+   int operator+ (Flight& left, Flight& right);
+   int operator+=(int& left, Flight& right);
 
 }
 #endif // SDDS_FLIGHT_H
