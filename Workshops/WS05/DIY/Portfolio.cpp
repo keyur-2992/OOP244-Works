@@ -8,7 +8,7 @@
 //
 // Revision History
 // -----------------------------------------------------------
-// Name                 Date            Reason
+// Name:keyurkumar Patel  Date:15-OCT-2023 STU ID:170852214
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -133,9 +133,5 @@ namespace sdds {
 
         return left;
     }
-
-    //
-
-
 
 }
