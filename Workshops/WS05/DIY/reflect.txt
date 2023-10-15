@@ -1,0 +1,18 @@
+/*
+*****************************************************************************
+                          workshop 5 reflection
+Full Name  : keyurkumar shankarlal patel
+Student ID#: 170852214
+Email      : kpatel453@myseneca.ca
+Section    : ZAA
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+Firstly, I explored the concept of type conversion operators, which allowed me to convert concrete type objects into primitive data types, enhancing the flexibility and usability of my code. Understanding the nuances of unary member operators was another key aspect of the workshop. These operators enable operations that affect only a single operand, offering a clear insight into their functionality.
+
+Moreover, the workshop provided in-depth knowledge about binary member operators, including +=, -=, <<, >>, and /=, among others. Learning how these operators manipulate left operands was pivotal in enhancing my programming skills. Additionally, I grasped the significance of binary helper operators, which, unlike member operators, don't alter the values of their operands. These operators, encapsulated within global functions, proved to be powerful tools for accessing private members of a class. For instance, the implementation of a global helper function like int operator+ (Flight& left, Flight& right) allowed me to perform complex operations on class objects without compromising encapsulation.

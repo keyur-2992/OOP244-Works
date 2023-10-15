@@ -67,6 +67,74 @@ namespace sdds {
         return cout;
     }
 
+    bool Portfolio::isVaild() const {
+        return (operator bool() && m_value > 0);
+    }
+
+    Portfolio::operator bool() const {
+        
+        return (m_type == 'G' || m_type == 'V' || m_type == 'I');
+    }
+
+
+    Portfolio::operator double() const {
+        return m_value;
+    }
+
+    Portfolio::operator const char* () const {
+        return m_stock;
+    }
+
+    Portfolio::operator char() const {
+        return m_type;
+    }
+
+    Portfolio& Portfolio::operator+=(double value) {
+        if (isVaild()) m_value += value;
+        return *this;
+    }
+
+    Portfolio& Portfolio::operator-=(double value) {
+        if (isVaild()) m_value -= value;
+        return *this;
+    }
+
+    bool Portfolio::operator~() const {
+        return (m_value < 0);
+    }
+
+    Portfolio& Portfolio::operator<<(Portfolio& right) {
+        if (isVaild() && right.isVaild()) {
+            m_value += right.m_value;
+            right.emptyPortfolio();
+        }
+        return *this;
+    }
+
+    Portfolio& Portfolio::operator>>(Portfolio& right) {
+        if (isVaild() && right.isVaild()) {
+            right.m_value += m_value;
+            emptyPortfolio();
+        }
+        return *this;
+    }
+
+    double operator+(Portfolio& left, Portfolio& right) {
+        double sum = 0;
+        if (left.isVaild() && right.isVaild()) {
+            sum = left.operator double() + right.operator double();
+        }
+        return sum;
+    }
+
+    double operator+=(double& left, Portfolio& right) {
+
+        left += right.operator double();
+
+        return left;
+    }
+
+    //
 
 
 
